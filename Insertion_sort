@@ -1,0 +1,16 @@
+
+float* porta(float* input, int g){
+    float buffer;
+    for(int i = 0; i<= g; i++){
+        for(int j = 0; j<= g; j++){
+            buffer = *(input + i);
+            if(*(input + i) - *(input + j) < 0 && *(input + i) != 0.0f && *(input + j) != 0.0f ){
+                *(input + i) = *(input + j);
+                *(input + j) = buffer;
+            }
+        }
+    }
+return input;
+}
+
+
